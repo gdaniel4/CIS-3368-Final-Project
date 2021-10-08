@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <p>Welcome to Gabe and Rick's random movie selector app!</p>
+            <hr>
+            <p>Step 1: Head over to the "Add a Friend!" form and start adding friends</p>
+            <p>Step 2: Go to the "Friend List" tab and make sure everyone is in and check what your ticket number is</p>
+            <p>Step 3: Next go to the "Add Movies!" form and start adding movies with your ticket number</p>
+            <p>Step 4: Is there anyone not participating anymore? If so go to "Friend List". If not, proceed to step 5</p>
+            <p>Step 5: Simply click on "GET A MOVIE!" and a random movie will be generated from participating friends!</p>    
+
+        </div>
+            
+            <div>
+                <form action="/add_friend" method="post">
+                    <hr>
+                    <br>ADD a Friend!</br>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" id="firstname" name="firstname"  class="form-control" placeholder="First Name" required
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="lastname" name="lastname"  class="form-control" placeholder="Last Name" required
+                        autofocus>
+                     </div>
+                    <input class="btn btn-lg btn-primary btn-block" type="submit">
+                </form>
+            </div>
+
+            <div>
+                <br>
+                <br>
+                <br>
+
+                <p>ADD a Movie!</p>
+                
+                <form action="/add_movie" method="post">
+                   <hr>
+                    <div class="form-group">
+                        <input type="text" id="friendid" name="friendid"  class="form-control" placeholder="Ticket #" required
+                        autofocus>
+                      </div>
+                      <p>Don't know your Ticket #? Check the friend list!</p>
+                      <hr>
+                      <p>If you don't have 10 movies, just leave it blank!</p>
+                     <div class="form-group">
+                        <input type="text" id="movie1" name="movie1"  class="form-control" placeholder="Movie - 1" required
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie2" name="movie2"  class="form-control" placeholder="Movie - 2" 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie3" name="movie3"  class="form-control" placeholder="Movie - 3 " 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie4" name="movie4"  class="form-control" placeholder="Movie - 4" 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie5" name="movie5"  class="form-control" placeholder="Movie - 5" 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie6" name="movie6"  class="form-control" placeholder="Movie - 6" 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie7" name="movie7"  class="form-control" placeholder="Movie - 7"
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie8" name="movie8"  class="form-control" placeholder="Movie - 8" 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie9" name="movie9"  class="form-control" placeholder="Movie - 9" 
+                        autofocus>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="movie10" name="movie10"  class="form-control" placeholder="Movie - 10" 
+                        autofocus>
+                     </div>
+    
+    
+                    <input class="btn btn-lg btn-primary btn-block" type="submit">
+                </form>
+            </div>
+ 
+
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>

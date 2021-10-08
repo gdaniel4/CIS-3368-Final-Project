@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <br>
+        <!-- print thank you message-->
+        <p> Thank you for submitting the form </p>
+        <!-- print the content of the form submission using EJS -->
+        <%=JSON.stringify(body)%>
+    </main>
+    <!--found this back button online-->
+    <form>
+        <input type="button" value="Go back!" onclick="history.back()">
+       </form>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

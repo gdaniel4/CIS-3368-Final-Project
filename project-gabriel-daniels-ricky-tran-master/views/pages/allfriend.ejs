@@ -1,0 +1,55 @@
+<!--Ricky Tran - 1832920-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="jumbotron">
+                    <p><%= locals.tagline %></p>
+                    <ul>
+                        <% if (locals.friend) { %>        
+                            <% locals.friend.forEach(function(friend) { %>
+                                    <p style="padding: 5px; border: 5px solid rgba(3, 110, 143, 0.747);">
+                                    <%=friend%>
+                                    </p>
+                            <% }); %>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <form action="/del_friend" method="post">
+
+                <br>Enter the name of who will not be participating</br>
+                  
+                  <hr>
+                <div class="form-group">
+                    <input type="text" id="friendid" name="friendid"  class="form-control" placeholder="Ticket #" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="firstname" name="firstname"  class="form-control" placeholder="First Name" required
+                    autofocus>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" id="lastname" name="lastname"  class="form-control" placeholder="Last Name" required
+                    autofocus>
+                 </div>
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+            </form>
+        </div>
+
+
+    </main>
